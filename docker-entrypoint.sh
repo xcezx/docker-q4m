@@ -18,7 +18,7 @@ if [ ! -d "/usr/local/mysql/data" ]; then
 		DELETE FROM mysql.user ;
 		CREATE USER 'root'@'%' IDENTIFIED BY '$MYSQL_ROOT_PASSWORD' ;
 		GRANT ALL ON *.* TO 'root'@'%' WITH GRANT OPTION ;
-		DROP DATABASE IF EXSITS test ;
+		DROP DATABASE IF EXISTS test ;
 	EOSQL
 
 	if [ "$MYSQL_DATABASE" ]; then
