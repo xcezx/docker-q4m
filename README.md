@@ -13,7 +13,7 @@ docker run --name q4m -d xcezx/q4m
 
 #### `MYSQL_VERSION`
 
-default is `5.6.22`
+default is `5.6.25`
 
 example:
 
