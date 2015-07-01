@@ -1,8 +1,7 @@
 #!/bin/bash
 set -e
 
-rm -f /etc/localtime
-cp -p /usr/share/zoneinfo/$TZ /etc/localtime
+ln -sf /usr/share/zoneinfo/$TZ /etc/localtime
 
 if [ ! -d "/usr/local/mysql/data" ]; then
 	./mysql-build-master/bin/mysql-build --verbose $MYSQL_VERSION /usr/local/mysql q4m-$Q4M_VERSION

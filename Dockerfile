@@ -4,7 +4,7 @@ MAINTAINER xcezx <main.xcezx@gmail.com>
 ENV MYSQL_VERSION 5.6.22
 ENV MYSQL_ROOT_PASSWORD p4ssw0rd
 ENV Q4M_VERSION 0.9.14
-ENV TZ Asia/Tokyo
+ENV TZ UTC
 
 WORKDIR /tmp/workdir
 
