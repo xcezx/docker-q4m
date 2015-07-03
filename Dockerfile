@@ -6,6 +6,8 @@ ENV MYSQL_ROOT_PASSWORD p4ssw0rd
 ENV Q4M_VERSION 0.9.14
 ENV TZ UTC
 
+ENV PATH /usr/local/mysql/bin:$PATH
+
 WORKDIR /tmp/workdir
 
 RUN yum -y install curl tar gcc gcc-c++ cmake ncurses-devel libaio-devel perl && \
@@ -21,4 +23,4 @@ COPY docker-entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 EXPOSE 3306
-CMD ["/usr/local/mysql/bin/mysqld_safe", "--user=mysql"]
+CMD ["mysqld", "--user=mysql"]
