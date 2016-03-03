@@ -1,0 +1,16 @@
+language: bash
+services: docker
+
+env:
+  - VERSION=5.6
+
+before_script:
+  - cd "$VERSION"
+  - image="xcezx/q4m:$VERSION"
+
+script:
+  - docker build -t "$image" .
+
+after_script:
+  - docker images
+
