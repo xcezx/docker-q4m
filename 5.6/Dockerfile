@@ -23,7 +23,7 @@ RUN mkdir /usr/local/src/mysql-build \
 
 RUN groupadd -r mysql && useradd -r -g mysql mysql
 
-VOLUME /usr/local/mysql
+VOLUME /usr/local/mysql/data
 WORKDIR /usr/local/mysql
 
 COPY docker-entrypoint.sh /entrypoint.sh
